@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/custom_appbar.dart'
+import 'custom_appbar.dart';
 
 class PageOne extends StatefulWidget {
   const PageOne({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _PageOneState extends State<PageOne> with SingleTickerProviderStateMixin {
   }
 
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
   return Scaffold(
     appBar: AppBar(
       title: const Text('TODO LIST'),
@@ -39,7 +39,7 @@ class _PageOneState extends State<PageOne> with SingleTickerProviderStateMixin {
           const CustomAppBar(),
           ListTile(
             title: const Text('List Item'),
-            onTap(): {
+            onTap: (){
 
        },
       )
@@ -48,7 +48,7 @@ class _PageOneState extends State<PageOne> with SingleTickerProviderStateMixin {
 ),
     body: TabBarView(
     controller: tabController,
-    children: [
+    children: const[
      Center(child: Icon(Icons.home)),
      Center(child: Icon(Icons.home))
         ],
